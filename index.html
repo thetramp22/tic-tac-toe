@@ -16,7 +16,8 @@
         <h1>Tic Tac Toe</h1>
     </header>
     <main>
-        <div id="game-grid" class="game"></div>        
+        <div id="game-grid" class="game"></div>
+        <div id="player-names" class="names"></div>
     </main>
     <footer class="footer">
         <p>
@@ -30,14 +31,22 @@
             <i class="fa-brands fa-github"></i>
         </a>
     </footer>
-    <div class="modal">
-        <form action="" class="form">
-            <label for="playerX">Enter name for Player X</label>
-            <input id="playerX" name="playerX" type="text" placeholder="Player X" />
-            <label for="playerO">Enter name for Player O</label>
-            <input id="playerO" name="playerO" type="text" placeholder="Player O" />
-            <button type="submit" id="play-btn" class="btn play">Play Game</button>
-        </form>
+    <div id="name-input-modal" class="modal">
+        <div class="modal-content name-input">
+            <form class="form">
+                <label for="playerX">Enter name for Player X</label>
+                <input id="playerX" name="playerX" type="text" placeholder="Player X" />
+                <label for="playerO">Enter name for Player O</label>
+                <input id="playerO" name="playerO" type="text" placeholder="Player O" />
+                <button type="submit" id="play-btn" class="btn play">Play Game</button>
+            </form>
+        </div>
+    </div>
+    <div id="game-end-modal" class="modal">
+        <div class="modal-content game-end">
+            <p id="game-end-text">Player X Wins!</p>
+            <button id="play-again-btn" class="play-again btn">Play Again?</button>
+        </div>
     </div>
 </body>
 </html>
