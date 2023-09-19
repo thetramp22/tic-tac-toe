@@ -1,5 +1,11 @@
 :root{
+    /* COLORS */
+    --bg: #333;
+    --text: #eee;
 
+    /* SIZES */
+    --cell-hw: 100px;
+    --grid-spacing: 10px;
 }
 
 *,
@@ -8,4 +14,76 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+}
+
+html {
+    /* footer support */
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    background-color: var(--bg);
+    color: var(--text);
+    font-family: 'DotGothic16', sans-serif;
+}
+
+h1 {
+    text-align: center;
+}
+
+header {
+    padding: 50px;
+}
+
+.game {
+    display: grid;
+    grid-template: var(--cell-hw) var(--cell-hw) var(--cell-hw)
+        / var(--cell-hw) var(--cell-hw) var(--cell-hw);
+    gap: var(--grid-spacing);
+
+    margin: 0 auto;
+    width: 340px;
+
+    background-color: #000;
+    padding: var(--grid-spacing);
+    border-radius: 10px;
+}
+
+.game button {
+    width: var(--cell-hw);
+    height: var(--cell-hw);
+    background-color: var(--bg);
+    color: var(--text);
+    font-family: 'DotGothic16', sans-serif;
+    font-size: 3rem;
+    border: none;
+    border-radius: 5px;
+
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    padding: 5px;
+  }
+
+.footer a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.fa-github {
+    font-size: 24px;
+    transition: transform 0.2s;
+}
+
+.fa-github:hover {
+    transform: scale(1.3);
 }
